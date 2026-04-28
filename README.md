@@ -16,7 +16,7 @@ An immersive, interactive 3D web-based developer portfolio designed to showcase 
 - **GSAP** (for complex sequencing and scroll-based animations)
 
 ## 🚀 Live Demo
-*3dinteractiveportfolio.netlify.app*
+https://3dinteractiveportfolio.netlify.app/
 
 ## 🛠 Setup Instructions
 Since this project uses pure HTML/CSS/JS with CDNs, there is no complex build step required.
