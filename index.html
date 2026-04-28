@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Interactive Developer Portfolio</title>
+  <meta name="description" content="Interactive 3D Developer Portfolio showcasing skills, projects, and 3D web graphics.">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+  <!-- Progress Bar for loading -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loader">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    <p>Loading Experience...</p>
+  </div>
+
+  <!-- Performance Stats (Optional FPS) -->
+  <div id="stats"></div>
+
+  <!-- Canvas for Three.js -->
+  <canvas id="bg-canvas"></canvas>
+
+  <div id="app">
+    <header>
+      <div class="logo">Dev<span class="highlight">3D</span></div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle">☀️</button>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="section">
+        <div class="hero-content card" data-tilt>
+          <h1>Hi, I'm <span class="highlight">Annanya Bagga</span></h1>
+          <p>A Creative Developer & AI Enthusiast building interactive experiences and modern web applications.</p>
+          <a href="#projects" class="btn primary-btn">View My Work</a>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section">
+        <div class="card" data-tilt>
+          <h2>About Me</h2>
+          <p>I am passionate about creating immersive digital experiences and AI-powered applications. With a strong foundation in modern web development, JavaScript, and a knack for creating tools like TranslatorBuddy and EduMaster.kiro, I bring ideas to life in the browser. You can check out my open-source work on GitHub at @annanyabagga01.</p>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="section">
+        <div class="card" data-tilt>
+          <h2>Tech Stack</h2>
+          <div class="skills-grid">
+            <div class="skill-item">JavaScript & TypeScript</div>
+            <div class="skill-item">React.js / Next.js</div>
+            <div class="skill-item">Python</div>
+            <div class="skill-item">Tailwind CSS</div>
+            <div class="skill-item">Node.js & Express</div>
+            <div class="skill-item">Three.js / GSAP</div>
+            <div class="skill-item">Git & GitHub</div>
+            <div class="skill-item">Figma / UI Design</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="section">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card" data-tilt>
+            <div class="project-img bg-phonedetector"></div>
+            <div class="project-info">
+              <h3>PhoneDetector</h3>
+              <p>A smart application designed to detect and identify mobile phones effectively.</p>
+              <div class="project-links">
+                <a href="https://github.com/annanyabagga01/PhoneDetector" target="_blank" class="btn-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-tilt>
+            <div class="project-img bg-edumaster"></div>
+            <div class="project-info">
+              <h3>EduMaster.kiro</h3>
+              <p>An innovative educational platform tailored to enhance the learning experience.</p>
+              <div class="project-links">
+                <a href="https://github.com/annanyabagga01/EduMaster.kiro" target="_blank" class="btn-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-tilt>
+            <div class="project-img bg-translator"></div>
+            <div class="project-info">
+              <h3>TranslatorBuddy</h3>
+              <p>A modern web-based language translation app supporting real-time multilingual translation using the MyMemory API.</p>
+              <div class="project-links">
+                <a href="https://github.com/annanyabagga01/CodeAlpha_TranslatorBuddy" target="_blank" class="btn-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-tilt>
+            <div class="project-img bg-soanbooth"></div>
+            <div class="project-info">
+              <h3>SoAn_Booth</h3>
+              <p>A web-based digital photobooth application providing an interactive photo-taking experience.</p>
+              <div class="project-links">
+                <a href="https://github.com/annanyabagga01/SoAn_Booth" target="_blank" class="btn-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section">
+        <div class="card" data-tilt>
+          <h2>Let's Talk</h2>
+          <p>Interested in working together? Feel free to reach out to me directly via Email, LinkedIn, or any of my social accounts!</p>
+          <div class="social-links">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=annanyabagga01@gmail.com" target="_blank" class="btn primary-btn email-btn">Email Me</a>
+            <a href="https://www.linkedin.com/in/annanya-bagga-44b279382" target="_blank" class="btn primary-btn li-btn">LinkedIn</a>
+            <a href="https://instagram.com/annanya_2404" target="_blank" class="btn primary-btn ig-btn">Instagram</a>
+            <a href="https://www.facebook.com/annanya.bagga.2025" target="_blank" class="btn primary-btn fb-btn">Facebook</a>
+            <a href="https://t.me/annanya_bagga" target="_blank" class="btn primary-btn tg-btn">Telegram</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
